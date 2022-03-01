@@ -49,19 +49,19 @@ class App extends Component<homeProps, homeState>{
       },
       {
         title: "Item 2",
-        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+        url : require('../TokoDistributor/src/image/carousel/banner2.png')
       },
       {
         title: "Item 3",
-        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+        url : require('../TokoDistributor/src/image/carousel/banner3.png')
       },
       {
         title: "Item 4",
-        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+        url : require('../TokoDistributor/src/image/carousel/banner4.png')
       },
       {
         title: "Item 5",
-        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+        url : require('../TokoDistributor/src/image/carousel/banner5.png')
       },
     ]
   };
@@ -102,10 +102,78 @@ class App extends Component<homeProps, homeState>{
                 renderItem={this._renderItem}
                 itemWidth={350}
                 sliderWidth={350}
-                onSnapToItem={(index: number) => this.setState({ activeIndex: index })}
+                autoplay={true}
+                inactiveSlideOpacity={1}
+                inactiveSlideScale={1}
+                loop={true}
+                //onSnapToItem={(index: number) => this.setState({ activeIndex: index })}
               />
               </View>
             </View>
+            <View style={{ height:90, width:'100%', marginTop:20, flexDirection:'row', alignItems:'center', paddingLeft:20}}>
+              <ScrollView horizontal={true} style={{height:90}}>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/Sembako1.png')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Sembako</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/elektronik.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Lauk Pauk</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/sayuran.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Sayuran</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/laukpauk.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Lauk Pauk</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/fashion.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Fashion</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/handphone.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Handphone</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/rumahtangga.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Perabotan</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/ibu.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Ibu & ANak</Text>
+                </View>
+                <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
+                  <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
+                    <Image source={require('../TokoDistributor/src/image/menu/alattulis.jpeg')} style={{height:50, width:50}} />                   
+                  </View>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Alat Tulis</Text>
+                </View>
+                
+              </ScrollView>              
+            </View>
+
+            <View style={{flex:1, backgroundColor:'red', width:'100%', marginTop:10}}>
+
+            </View>
+            
 
           </View>
 
