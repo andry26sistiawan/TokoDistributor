@@ -8,8 +8,9 @@
  * @format
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import {
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -19,79 +20,111 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Carousel from 'react-native-snap-carousel';
 
-const Section: React.FC<{
+interface homeProps {
+
+};
+
+interface homeState{
+  count : number;
+  carouselItems : any;
+  activeIndex : number;
+};
+
+interface ItemProps {
   title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+  url: any;
+}
 
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+class App extends Component<homeProps, homeState>{
+  ref = React.createRef<any>();
+  state: homeState = {
+    count: 0,
+    activeIndex: 0,
+    carouselItems: [
+      {
+        title: "Item 1",
+        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+      },
+      {
+        title: "Item 2",
+        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+      },
+      {
+        title: "Item 3",
+        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+      },
+      {
+        title: "Item 4",
+        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+      },
+      {
+        title: "Item 5",
+        url : require('../TokoDistributor/src/image/carousel/banner1.png')
+      },
+    ]
   };
+  
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+  _renderItem = ({item , index} : { item: ItemProps; index: number }) => {
+      return (
+          <View style={{height:100, width:350, backgroundColor:'white'}}>
+              <Image source={item.url} style={{height:100, width:350}} />
+          </View>
+      );
+  }
+  render(){
+    return(
+      <SafeAreaView style={{flex:1, backgroundColor:'white'}}>
+        <View style={{flex:1}}>
+          <View style={{flex:1, alignItems:'center'}}>
+
+            <View style={{height:40, width:345, marginTop:40, borderRadius:6, borderWidth:1, borderColor:'#BED0D6', flexDirection:'row'}}>
+              <View style={{flex:1, flexDirection:'row', alignItems:'center'}}>
+                <View style={{marginLeft:10, }}>
+                  <Image source={require('../TokoDistributor/src/image/icons/search.png')} style={{height:25, width:25}} />
+                </View>
+                <View style={{marginLeft:10}}>
+                  <Text style={{color:'#80898B', }}>Search</Text>
+                </View>
+              </View>
+              <View style={{flex:1, alignItems:'flex-end', justifyContent:'center', paddingRight:10}}>
+                <Image source={require('../TokoDistributor/src/image/icons/mic.png')} style={{height:25, width:25}} />
+              </View>
+            </View>
+
+            <View style={{height:100, width:'100%', marginTop:20, justifyContent:'center', alignItems:'center'}}>
+              <View style={{height:100, width:350, justifyContent:'center', alignItems:'center'}}>
+                <Carousel
+                ref={this.ref}
+                data={this.state.carouselItems}
+                renderItem={this._renderItem}
+                itemWidth={350}
+                sliderWidth={350}
+                onSnapToItem={(index: number) => this.setState({ activeIndex: index })}
+              />
+              </View>
+            </View>
+
+          </View>
+
+          <View style={{backgroundColor:'yellow', width:'100%', height:50, flexDirection:'row', borderTopWidth:1, borderTopColor:'#C4C4C4'}}>
+            <View style={{backgroundColor:'white', flex:1, justifyContent:'center', alignItems:'center'}}>
+              <Text>Galeri</Text>
+            </View>
+            <View style={{backgroundColor:'white', flex:1, justifyContent:'center', alignItems:'center'}}>
+              <Text>Contact</Text>
+            </View>
+          </View>
+          
         </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+        
+      </SafeAreaView>
+    )
+  }
+}
+  
 
 const styles = StyleSheet.create({
   sectionContainer: {
