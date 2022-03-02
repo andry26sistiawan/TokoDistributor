@@ -65,7 +65,7 @@ class MenuHome extends Component<any, any>{
               <ScrollView horizontal={true} style={{height:90}}>
                     {
                         this.state.dataMenu.map((y : any) => {
-                            return (<MenuBox title={y.title} source ={y.Source} />)
+                            return (<MenuBox key={y.source} title={y.title} source ={y.Source} />)
                         })
                     }
               </ScrollView>              

@@ -70,7 +70,7 @@ class FeedHome extends Component<any, any>{
               
                     {
                         this.state.dataMenu.map((y : any) => {
-                            return (<FeedBox title={y.title} source ={y.Source} />)
+                            return (<FeedBox key={y.title} title={y.title} source ={y.Source} />)
                         })
                     }            
             </View>
