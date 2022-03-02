@@ -158,7 +158,7 @@ class App extends Component<homeProps, homeState>{
                   <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
                     <Image source={require('../TokoDistributor/src/image/menu/ibu.jpeg')} style={{height:50, width:50}} />                   
                   </View>
-                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Ibu & ANak</Text>
+                  <Text style={{fontSize:12, color:'black', marginTop:5}}>Ibu & Anak</Text>
                 </View>
                 <View style={{height:80, width:80, backgroundColor:'white', alignItems:'center', marginRight:10, shadowColor: "#000", shadowOffset: { width: 2, height: 4, },  shadowOpacity: 0.32, shadowRadius: 5.46, elevation: 9,  }}>
                   <View style={{height:50, width:50, justifyContent:'center', alignItems:'center'}} >
@@ -170,9 +170,100 @@ class App extends Component<homeProps, homeState>{
               </ScrollView>              
             </View>
 
-            <View style={{flex:1, backgroundColor:'red', width:'100%', marginTop:10}}>
+            <ScrollView style={{flex:1, width:'100%', marginTop:20, }}>
+              <View style={{alignItems:'center', flexDirection:'row', flexWrap:'wrap', paddingBottom:20, paddingHorizontal:12, justifyContent:'space-between'}}>
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/1.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp.56.000 Dress Gwan
+                  </Text>
+                </View>
 
-            </View>
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/2.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp.115.000 Dress Regina
+                  </Text>
+                </View>
+                
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/3.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 124.000 Dziner826
+                  </Text>
+                </View>
+
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/4.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 105.000 JBL Speaker
+                  </Text>
+                </View>
+
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/5.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 95.000 Karet 2 Kepala
+                  </Text>
+                </View>
+
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/6.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 90.000 QuickShine
+                  </Text>
+                </View>
+
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/7.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 105.000 Saklar Lampu
+                  </Text>
+                </View>
+
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/8.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 82.000 Skmei 1823 
+                  </Text>
+                </View>
+
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/9.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 74.000 Stelan Anak Pedal 
+                  </Text>
+                </View>
+
+                <View style={{height:100, width: 190, backgroundColor:'white', marginTop:10, alignItems:'center'}}>
+                  <View style={{height:60, width:60, backgroundColor:'red', marginBottom:5}}>
+                    <Image source={require('./src/image/feed/10.png')} />
+                  </View>
+                  <Text style={{textAlign:'center', fontSize:12, color:'black', width:170}}>
+                    Rp. 22.500 Taffpack Lakban 
+                  </Text>
+                </View>
+                
+              </View>
+            </ScrollView>
             
 
           </View>
